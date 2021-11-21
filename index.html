@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title head -->
+    <title>Calculator</title>
+
+    <!-- css stylsheet links -->
+    <link rel="stylesheet" href="./src/sass/main.scss" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ff32966652.js"
+      crossorigin="anonymous"
+      async
+    ></script>
+    <script type="module" src="./src/js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="calculator__result">
+        <h1 class="calculator__result--heading">Calculator</h1>
+        <label class="calculator__result--operation"></label>
+        <label class="calculator__result--answer"></label>
+        <div class="calculator__result--darkmode">
+          <i class="fas fa-sun"></i>
+        </div>
+        <hr />
+      </div>
+      <div class="calculator__numberpad">
+        <label class="clear">AC</label>
+        <label class="remove"><i class="fas fa-backspace"></i></label>
+        <label class="operation">%</label>
+        <label class="operation circle">÷</label>
+        <label class="number">7</label>
+        <label class="number">8</label>
+        <label class="number">9</label>
+        <label class="operation circle">×</label>
+        <label class="number">4</label>
+        <label class="number">5</label>
+        <label class="number">6</label>
+        <label class="operation circle">-</label>
+        <label class="number">1</label>
+        <label class="number">2</label>
+        <label class="number">3</label>
+        <label class="operation circle">+</label>
+        <label></label>
+        <label class="number">0</label>
+        <label class="number">.</label>
+        <label class="equal circle-red">=</label>
+      </div>
+    </div>
+  </body>
+</html>

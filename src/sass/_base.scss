@@ -1,0 +1,53 @@
+$primary-bg: #000807;
+$secondary-bg: #fff;
+
+$result-bg1: #1b262c;
+$result-bg2: rgba(200, 213, 221, 0.7);
+
+$color-grad-1: #239186;
+$color-grad-2: #2bb5a8;
+
+$color-grey-dark-1: #615551; // Normal text
+$color-grey-dark-2: #918581; // Lighter text
+
+$gradient: linear-gradient(to right bottom, $color-grad-1, $color-grad-2);
+
+$bp-large: 78.15em; // 1250px
+$bp-medium: 61.25em; // 980px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.6;
+    padding: 2rem;
+    color: #fff;
+    background-image: $gradient;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

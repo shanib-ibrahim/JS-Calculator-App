@@ -1,0 +1,122 @@
+.calculator {
+    background-color: $primary-bg;
+    width: 350px;
+    height: 100%;
+    max-height: 750px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 40% 60%;
+    grid-template-areas:
+        "result"
+        "numberpad";
+
+    &__result {
+        background-color: rgba($result-bg1, 0.7);
+        padding: 2rem;
+        position: relative;
+
+        hr {
+            width: 8%;
+            height: 1px;
+            border: 0.5px solid #99a8b2;
+            border-radius: 10px;
+
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &--darkmode {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        &--operation {
+            display: block;
+            position: absolute;
+            top: 60px;
+            right: 25px;
+            font-size: 4.5rem;
+            @include transition-ease;
+        }
+        &--answer {
+            @extend .calculator__result--operation;
+            top: 130px;
+            color: rgba($result-bg2, 0.5);
+            font-size: 2.2rem;
+        }
+        &--heading {
+            @include transition-ease;
+            margin-top: 2rem;
+            font-weight: 200;
+            font-size: 4rem;
+            opacity: 1;
+        }
+    }
+
+    &__numberpad {
+        margin-top: 5%;
+        font-size: 2.5rem;
+        font-weight: 100;
+        display: grid;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 0.8rem;
+        row-gap: 1rem;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 10%;
+    }
+}
+.circle {
+    border-radius: 50%;
+    margin-left: 14px;
+    width: 50px;
+    border: none;
+    background-color: rgba(#1b262c, 0.7);
+
+    &-red {
+        @extend .circle;
+        background-color: #b91646;
+    }
+}
+
+.dark-mode {
+    background-color: $secondary-bg;
+    color: $primary-bg;
+}
+.dark-mode-result {
+    background-color: $result-bg2;
+}
+
+.hidden {
+    display: none;
+}
+
+.result-view {
+    color: rgba($result-bg2, 0.5);
+    font-size: 2.2rem;
+}
+
+.operation-view {
+    font-size: 4.5rem;
+    top: 100px;
+    color: #fff;
+}
+
+.light-result-view {
+    color: rgb(89 111 124 / 50%);
+    font-size: 2.2rem;
+}
+.light-operation-view {
+    font-size: 4.5rem;
+    top: 100px;
+    color: #000;
+}
+
+.heading-hidden {
+    font-size: 0;
+    opacity: 0;
+}
